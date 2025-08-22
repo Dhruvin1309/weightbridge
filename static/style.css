@@ -71,3 +71,21 @@ form input[type="submit"]:hover {
     margin-bottom: 8px;
     font-size: 14px;
 }
+
+.reset-button {
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: #ed4956; /* Instagram-like red for delete */
+    padding: 8px;
+    margin-top: 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.reset-button:hover {
+    background-color: #c1353d;
+}
+
+
