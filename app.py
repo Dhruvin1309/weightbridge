@@ -57,7 +57,7 @@ def daily_total():
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
 
-@app.route('/reset' , methods=['POST'])
+@app.route('/reset' , methods=['GET' , 'POST'])
 def reset_excel():
     from openpyxl import Workbook
 
@@ -69,6 +69,7 @@ def reset_excel():
     wb.save(EXCEL_FILE)
 
     return "✅ Excel file cleared and headers added. <a href='/'>Go Back</a>"
+
 
 
 
