@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weighbridge Entry</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Weighbridge Charges Entry</h2>
+        <form action="/submit" method="POST">
+            <input type="date" name="date" required placeholder="Date">
+
+            <input type="text" name="serial" placeholder="Serial Number" required>
+
+            <input type="text" name="vehicle" placeholder="Vehicle Number" required>
+
+            <input type="number" name="charges" step="0.01" placeholder="Charges (₹)" required>
+
+            <input type="submit" value="💾 Save Entry">
+        </form>
+
+        <div class="links">
+            <a href="/download">📁 Download Excel</a>
+            <a href="/daily_total">🧮 Add Today's Total</a>
+        </div>
+    </div>
+</body>
+</html>
