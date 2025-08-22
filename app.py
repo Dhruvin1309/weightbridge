@@ -56,3 +56,18 @@ def daily_total():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
+
+@app.route('/reset')
+def reset_excel():
+    from openpyxl import Workbook
+
+    # Create new workbook
+    wb = Workbook()
+    ws = wb.active
+    # Add headers
+    ws.append(["Date", "Serial Number", "Vehicle Number", "Charges"])
+    wb.save(EXCEL_FILE)
+
+    return "✅ Excel file cleared and headers added. <a href='/'>Go Back</a>"
+
+
